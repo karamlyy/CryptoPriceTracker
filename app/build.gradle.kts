@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.cryptotracker"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.cryptotracker"
@@ -55,4 +55,33 @@ dependencies {
     //Dependency Injection HILT
     implementation ("com.google.dagger:hilt-android:2.44")
     kapt ("com.google.dagger:hilt-compiler:2.44")
+
+    //Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
+
+    //ViewModel and Livedata
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+
+    //Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3")
+
+    //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+
+    //animate recyclerview
+    implementation ("jp.wasabeef:recyclerview-animators:4.0.2")
+
+    //Room Database
+    implementation("androidx.room:room-runtime:2.5.0-alpha02")
+    annotationProcessor("androidx.room:room-compiler:2.5.0-alpha02")
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:2.5.0-alpha02")
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:2.5.0-alpha02")
+
 }
